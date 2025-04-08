@@ -1,0 +1,19 @@
+.recycling-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
+  margin: 0 2rem;
+}
+
+.images img {
+  width: 250px;
+}
