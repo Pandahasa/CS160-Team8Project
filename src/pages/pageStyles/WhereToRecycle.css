@@ -1,0 +1,14 @@
+.where-to-recycle {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.where-to-recycle h1 {
+  margin-bottom: 0.5rem;
+}
+
+.where-to-recycle ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}

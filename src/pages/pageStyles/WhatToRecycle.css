@@ -1,0 +1,14 @@
+.what-to-recycle {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.what-to-recycle h1 {
+  margin-bottom: 0.5rem;
+}
+
+.what-to-recycle ul {
+  list-style-type: square;
+  margin-left: 2rem;
+}

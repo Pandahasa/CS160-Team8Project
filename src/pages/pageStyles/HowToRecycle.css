@@ -1,0 +1,13 @@
+.how-to-recycle {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.how-to-recycle h1 {
+  margin-bottom: 0.5rem;
+}
+
+.how-to-recycle ol {
+  margin-left: 2rem;
+}
