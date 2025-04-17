@@ -1,14 +1,79 @@
 .what-to-recycle {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .what-to-recycle h1 {
+  margin-bottom: 1rem;
+}
+
+.recyclables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.recyclable-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.recyclable-item img:hover {
+  transform: scale(1.05);
+}
+
+.recyclable-item h3 {
+  margin-top: 0.5rem;
+}
+
+.barcode-section {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.barcode-section h2 {
+  margin-bottom: 1rem;
+}
+
+.barcode-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barcode-form label {
+  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.what-to-recycle ul {
-  list-style-type: square;
-  margin-left: 2rem;
+.barcode-form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  width: 200px;
+}
+
+.barcode-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #54c759;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.barcode-form button:hover {
+  background-color: #3ea74b;
 }

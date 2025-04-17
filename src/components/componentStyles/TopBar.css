@@ -1,0 +1,27 @@
+.top-bar {
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-bar nav {
+    display: flex;
+    gap: 10rem;
+  }
+  
+  .top-bar a {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, border-radius 0.3s;
+  }
+  
+  .top-bar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+  }
