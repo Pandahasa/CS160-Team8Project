@@ -4,6 +4,7 @@ import bottleImage from '../assets/bottles.jpg'
 import cansImage from '../assets/cans.png'
 import paperImage from '../assets/paperrecycling.jpeg'
 import plasticbagsImage from '../assets/plasticbags.jpg'
+import { Link } from 'react-router-dom'
 
 function BarcodeInput() {
   const [barcode, setBarcode] = useState('')
@@ -44,22 +45,25 @@ export default function WhatToRecycle() {
       <p>Below are common recyclables. Click on an image for details:</p>
 
       <div className="recyclables-grid">
-        <div className="recyclable-item">
+        <Link to="/PaperCardboard" className="recyclable-item">
           <img src={paperImage} alt="Paper Recycling" />
           <h3>Paper &amp; Cardboard</h3>
-        </div>
-        <div className="recyclable-item">
+        </Link>
+
+        <Link to="/PlasticBottles" className="recyclable-item">
           <img src={bottleImage} alt="Plastic Bottles" />
           <h3>Plastic Bottles</h3>
-        </div>
-        <div className="recyclable-item">
+        </Link>
+
+        <Link to="/AluminumCans" className="recyclable-item">
           <img src={cansImage} alt="Aluminum Cans" />
           <h3>Aluminum Cans</h3>
-        </div>
-        <div className="recyclable-item">
+        </Link>
+
+        <Link to="/PlasticBags" className="recyclable-item">
           <img src={plasticbagsImage} alt="Plastic Bags" />
           <h3>Plastic Bags</h3>
-        </div>
+        </Link>
       </div>
 
       <div className="barcode-section">
