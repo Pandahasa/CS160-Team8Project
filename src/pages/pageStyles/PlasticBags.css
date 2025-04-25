@@ -1,0 +1,101 @@
+.plastic-bags-page {
+    padding: 2rem;
+    font-family: sans-serif;
+    color: #333;
+  }
+  
+  /* Align headings properly */
+  .fun-fact h3,
+  .recycling-tips h2 {
+    margin-top: 0;
+  }
+  
+  /* New top columns layout */
+  .top-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: start;
+  }
+  
+  .fun-fact, .recycling-tips {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  /* Backgrounds */
+  .fun-fact {
+    background-color: #e8f5e9;
+    border-left: 6px solid #4caf50;
+  }
+  
+  .recycling-tips {
+    background-color: #f0f8ff;
+    border-left: 6px solid #2196f3;
+  }
+  
+  /* List style */
+  .recycling-tips ul {
+    list-style: none;
+    padding-left: 0.5rem;
+    margin: 0;
+  }
+  
+  .recycling-tips li {
+    margin: 0.5rem 0;
+  }
+  
+  /* Headings for plastic types */
+  .plastics-heading {
+    margin-top: 3rem;
+    font-size: 1.75rem;
+  }
+  
+  .plastics-subheading {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Grid layout for plastics */
+  .plastic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Cards */
+  .plastic-card {
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .plastic-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .recyclable {
+    background-color: #e6f4ea;
+    border-left: 6px solid #28a745;
+  }
+  
+  .caution {
+    background-color: #fff8e5;
+    border-left: 6px solid #ffc107;
+  }
+  
+  .non-recyclable {
+    background-color: #fdecea;
+    border-left: 6px solid #dc3545;
+  }
