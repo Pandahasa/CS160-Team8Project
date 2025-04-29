@@ -1,14 +1,22 @@
-.where-to-recycle {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 1rem;
+.nearest-recycling {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  font-family: 'Karla', Avenir, Helvetica, Arial, sans-serif;
 }
 
-.where-to-recycle h1 {
-  margin-bottom: 0.5rem;
+.nearest-recycling h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
 }
 
-.where-to-recycle ul {
-  list-style-type: disc;
-  margin-left: 2rem;
+.nearest-recycling p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #34495e;
 }
