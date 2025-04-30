@@ -1,13 +1,56 @@
 .how-to-recycle {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-family: 'Karla', Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f9fff9;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .how-to-recycle h1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 2.5rem;
 }
 
-.how-to-recycle ol {
-  margin-left: 2rem;
+.how-to-recycle .intro {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 2rem;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step-card {
+  background: linear-gradient(135deg, #81c784, #a5d6a7);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #66bb6a, #81c784);
+}
+
+.step-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.step-description {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #f1f8e9;
+  transition: opacity 0.3s;
 }
