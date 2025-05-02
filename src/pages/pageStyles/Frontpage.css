@@ -1,19 +1,113 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .recycling-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 3rem 1.5rem;
+  background-color: #ffffff;
+  font-family: sans-serif;
 }
 
-.images {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.center-text {
+/* Hero Section */
+.hero-section {
   text-align: center;
-  margin: 0 2rem;
+  margin-bottom: 3rem;
 }
 
-.images img {
-  width: 250px;
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #166534;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #15803d;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: #166534;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #14532d;
+  transform: scale(1.05);
+}
+
+/* Image Row */
+.image-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.interactive-img {
+  width: 180px;
+  max-width: 90vw;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.interactive-img:hover {
+  transform: scale(1.05);
+}
+
+/* Info Section */
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .info-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-box {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #166534;
+  margin-bottom: 0.5rem;
+}
+
+.info-box p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(22, 101, 52, 0.1);
 }
