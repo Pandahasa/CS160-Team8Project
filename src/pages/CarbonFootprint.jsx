@@ -22,64 +22,58 @@ const CarbonFootprint = () => {
     };
 
     return (
-        <div style={{ padding: '20px' }}>
-            <h1>Carbon Footprint Calculator</h1>
-            <div>
-                <label>
-                    Electricity Usage (kWh per month):
+        <div className="container">
+            <div className="header">Carbon Footprint Calculator</div>
+            <div className="card">
+                <div className="form-group">
+                    <label>Electricity Usage (kWh per month):</label>
                     <input
                         type="number"
                         value={electricity}
                         onChange={(e) => setElectricity(e.target.value)}
                     />
-                </label>
-            </div>
-            <div>
-                <label>
-                    Miles Driven (per month):
+                </div>
+                <div className="form-group">
+                    <label>Miles Driven (per month):</label>
                     <input
                         type="number"
                         value={milesDriven}
                         onChange={(e) => setMilesDriven(e.target.value)}
                     />
-                </label>
-            </div>
-            <div>
-                <label>
-                    Natural Gas Usage (therms per month):
+                </div>
+                <div className="form-group">
+                    <label>Natural Gas Usage (therms per month):</label>
                     <input
                         type="number"
                         value={naturalGas}
                         onChange={(e) => setNaturalGas(e.target.value)}
                     />
-                </label>
-            </div>
-            <div>
-                <label>
-                    Waste Produced (kg per week):
+                </div>
+                <div className="form-group">
+                    <label>Waste Produced (kg per week):</label>
                     <input
                         type="number"
                         value={waste}
                         onChange={(e) => setWaste(e.target.value)}
                     />
-                </label>
-            </div>
-            <div>
-                <label>
-                    Water Usage (gallons per month):
+                </div>
+                <div className="form-group">
+                    <label>Water Usage (gallons per month):</label>
                     <input
                         type="number"
                         value={water}
                         onChange={(e) => setWater(e.target.value)}
                     />
-                </label>
-            </div>
-            <button onClick={calculateFootprint}>Calculate</button>
-            {footprint !== null && (
-                <div>
-                    <h2>Your Annual Carbon Footprint: {footprint} kg CO2</h2>
                 </div>
-            )}
+                <button className="button" onClick={calculateFootprint}>Calculate</button>
+
+                {footprint !== null && (
+                    <div style={{ marginTop: '20px', textAlign: 'center' }}>
+                        <h3>Your Annual Carbon Footprint:</h3>
+                        <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{footprint} kg CO2</p>
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
