@@ -6,18 +6,23 @@ import paperImage from '../assets/paperrecycling.jpeg'
 import plasticbagsImage from '../assets/plasticbags.jpg'
 import { Link } from 'react-router-dom'
 
-function BarcodeInput() {
-  const [barcode, setBarcode] = useState('')
+function BarcodeInput({setRecycleMethod}) {
+  const [barcode, setBarcode] = useState({})
 
   async function handleSubmit(e) {
     e.preventDefault()
     try {
-      const response = await fetch('/api/barcodes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ barcodeValue: barcode }),
+      const params = new URLSearchParams();
+      params.append("barcode", barcode)
+      const response = await fetch(`http://localhost:5000/api/v1/get-first-barcode-data?${params}`, {
+        method: 'GET',
+        
       })
-      console.log('Server response:', await response.json())
+      const content = await response.json().then((resp) => {
+        console.log('Server response:', resp);
+        setRecycleMethod(resp);
+      });
+
     } catch (error) {
       console.error('Error sending barcode:', error)
     }
@@ -38,7 +43,26 @@ function BarcodeInput() {
   )
 }
 
+function capitalizeFirstLetter(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
+function RecycleMethod({recycleMethod}) {
+  return (
+    <div style={{textAlign: 'left'}}> {
+      recycleMethod.hasOwnProperty("order") ? (
+        recycleMethod.order.length > 0 ?
+          recycleMethod.order.map((x, i) => {
+            return <p key={i}><b>{capitalizeFirstLetter(x)}</b>: {recycleMethod[x]}</p>;
+          }) : "Unknown Item. Add it?"
+      ) : ""    
+    } </div>  
+  )
+}
+
 export default function WhatToRecycle() {
+  var [recycleMethod, setRecycleMethod] = useState('');
+
   return (
     <section className="what-to-recycle">
       <h1>What to Recycle</h1>
@@ -68,7 +92,8 @@ export default function WhatToRecycle() {
 
       <div className="barcode-section">
         <h2>Scan Your Barcode</h2>
-        <BarcodeInput />
+        <BarcodeInput setRecycleMethod={setRecycleMethod}/>
+        <RecycleMethod recycleMethod={recycleMethod}/>
       </div>
     </section>
   )
