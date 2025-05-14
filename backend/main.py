@@ -82,3 +82,6 @@ def upload_barcode_data():
     d.append(request_data_json)
     r.set(key, json.dumps(d))
     return "Uploaded", 200
+
+if __name__ == '__main__':
+    app.run(debug=True)
